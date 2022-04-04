@@ -68,15 +68,61 @@ if(document.readyState == 'loading'){
 function ready(){
     let removeBtn = document.querySelectorAll('.removeBtn');
     removeBtn.forEach((remBtn,i)=>{
-        remBtn.addEventListener('click',removingBtn)
+        remBtn.addEventListener('click',removingCarRow)
     })
+
+    // quantity changed
+    let quantityInputs = document.getElementsByClassName('input');
+    for (let i = 0; i < quantityInputs.length; i++) {
+        let input = quantityInputs[i];
+        input.addEventListener('change', inputChanged)
+    }
+
+    // adding to the cart
+    let addToCart = document.getElementsByClassName('addToCart');
+    for (let i = 0; i < addToCart.length; i++) {
+        let addToCartBtn = addToCart[i]
+        addToCartBtn.addEventListener('click',addingToCart)
+    }
 }
 
+
 // remove functon
-function removingBtn(e){
+function removingCarRow(e){
     let parentRow = e.target.parentElement
     parentRow.remove();
     updateTotal()
+}
+
+// quantityChanged
+function inputChanged(e){
+    let input = e.target;
+    if(isNaN(input.value) || input.value <= 0){
+        input.value = 1
+    }
+    updateTotal()
+}
+
+// adding the items to the cart
+function addingToCart(e){
+    let button = e.target;
+    let btnParent = e.target.parentElement.parentElement
+    let productCard = btnParent.parentElement;
+    let nameItem = productCard.getElementsByClassName('name')[0].innerText; 
+    let priceItem = productCard.getElementsByClassName('price')[0].innerText; 
+    let imgItem = productCard.querySelectorAll('.img img')[0].src; 
+    let price = parseFloat(priceItem.replace('$',""))
+
+
+    pushToCart(nameItem,price,imgItem)
+    updateTotal()
+}
+function pushToCart(nameItem,price,imgItem){
+    let cartShopBox = document.createElement('div');
+    cartShopBox.classList.add('row');
+
+    let mySideBars = document.getElementsByClassName('sideBar')[0];
+    let cardItemsName = mySideBars.getElementsByClassName('name')[0]
 }
 
 // updateTotal
@@ -92,10 +138,10 @@ function updateTotal(){
         let price = parseFloat(priceElement.innerText.replace('$', ''));
         let quantityValue = quantityElement.value;
 
-        total += (price * quantityValue)
-        document.querySelector('.total-no').innerText = '$'+total.toFixed(2)
-        console.log(total)
+        total = total + (price * quantityValue)
     }
+    total = Math.round(total * 100) / 100
+    document.getElementsByClassName('total-no')[0].innerText = '$'+total
 }
 
 
