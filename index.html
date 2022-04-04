@@ -15,15 +15,22 @@
           <a href="index.html" class="logo">
               <img src="./img/Bilan-removebg-preview.png" alt="">
           </a>
-          <div class="links">
-              <ul>
-                  <li><a href="#">home</a></li>
-                  <li><a href="#">about</a></li>
-                  <li><a href="#">product</a></li>
-              </ul>
-          </div>
           <div class="social">
               <a href="#"><i class="fas fa-cart-plus"></i></a>
+          </div>
+      </div>
+      <div class="container row2">
+          <div class="no">
+              <i class="fa fa-phone-alt"></i>
+              +27 744584834
+          </div>
+          <div class="links">
+              <a href="#">home</a>
+              <a href="#">about</a>
+              <a href="#">products</a>
+              <a href="#">model</a>
+              <a href="#">FAQ</a>
+              <a href="#">contact</a>
           </div>
       </div>
   </header>
@@ -55,6 +62,17 @@
         </div>
     </div>
 </section>
+<!-- grid  -->
+<div class="divide">
+    <div class="left">
+        <img src="./img/shirt1.jpg" alt="">
+        <p>womens fashion</p>
+    </div>
+    <div class="right">
+        <img src="./img/shirt3.jpg" alt="">
+        <p>mens clothes</p>
+    </div>
+</div>
 <!-- new -->
 <div class="shirts">
     <div class="container">
@@ -96,6 +114,7 @@
     <div class="product-containers">
         <div class="product-card">
             <div class="product-image">
+                <div class="discount">50% 0ff</div>
                 <img src="./img/shirt2.jpg" alt="">
             </div>
             <div class="product-details">
@@ -106,6 +125,29 @@
         </div>
         <div class="product-card">
             <div class="product-image">
+                <div class="discount">50% 0ff</div>
+                <img src="./img/shirt2.jpg" alt="">
+            </div>
+            <div class="product-details">
+                <h2>Model korean</h2>
+                <p class="price">$200</p>
+            </div>
+            <div class="btn">shop now</div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount">50% 0ff</div>
+                <img src="./img/shirt2.jpg" alt="">
+            </div>
+            <div class="product-details">
+                <h2>Model korean</h2>
+                <p class="price">$200</p>
+            </div>
+            <div class="btn">shop now</div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount">50% 0ff</div>
                 <img src="./img/shirt1.jpg" alt="">
             </div>
             <div class="product-details">
@@ -116,6 +158,7 @@
         </div>
         <div class="product-card">
             <div class="product-image">
+                <div class="discount">50% 0ff</div>
                 <img src="./img/shirt3.jpg" alt="">
             </div>
             <div class="product-details">
@@ -126,6 +169,7 @@
         </div>
         <div class="product-card">
             <div class="product-image">
+                <div class="discount">50% 0ff</div>
                 <img src="./img/shirt.jpg" alt="">
             </div>
             <div class="product-details">
@@ -138,44 +182,18 @@
 </div>
 <!-- slideContainer -->
 <div class="fixed-seting">
-    <i class="fas fa-cog"></i>
+    <i class="fas fa-shopping-cart"></i>
 </div>
 
 <div class="sideBar">
     <button class="btn" id="close"><i class="fa fa-times"></i></button>
-    <div class="row">
-        <div class="img">
-            <img src="./img/shirt1.jpg" alt="">
-        </div>
-        <div class="detail">
-           <div class="flex">
-            <p class="name">italian dress suit</p>
-            <p class="price">$230</p>
-           </div>
-            <input type="number" class="input" value="1">
-        </div>
-        <button class="removeBtn">
-            <i class="fa fa-trash "></i>
-        </button>
+    <h1 class="header">your cart</h1>
+    <div class="content">
     </div>
-    <div class="row">
-        <div class="img">
-            <img src="./img/shoe.png" alt="">
-        </div>
-        <div class="detail">
-           <div class="flex">
-            <p class="name">Nike air</p>
-            <p class="price">$230</p>
-           </div>
-            <input type="number" class="input" value="1">
-        </div>
-        <button class="removeBtn">
-            <i class="fa fa-trash "></i>
-        </button>
-    </div>
-    <div class="total">
+    <div class="total" id="total">
         <p class="total-name">Total: <span class="total-no">$0</span></p>
     </div>
+    <button class="clear-rows">buy now</button>
 </div>
 <!-- shopping carrt -->
 <div class="shopping">
@@ -188,7 +206,7 @@
                 </div>
                 <div class="content">
                     <div class="flex">
-                        <h3 class="name">Three suit piece</h3>
+                        <h3 class="name">nike shoe</h3>
                         <p class="price">$180</p>
                     </div>
                     <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -197,11 +215,50 @@
             </div>
             <div class="card">
                 <div class="img">
-                    <img src="./img/shirt.jpg" alt="">
+                    <img src="./img/shirt2.jpg" class="image-product" alt="">
                 </div>
                 <div class="content">
                     <div class="flex">
-                        <h3 class="name">Three suit piece</h3>
+                        <h3 class="name">black jacket</h3>
+                        <p class="price">$200</p>
+                    </div>
+                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/shirt2.jpg" class="image-product" alt="">
+                </div>
+                <div class="content">
+                    <div class="flex">
+                        <h3 class="name">tie and tish</h3>
+                        <p class="price">$80</p>
+                    </div>
+                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/shirt.jpg" class="image-product" alt="">
+                </div>
+                <div class="content">
+                    <div class="flex">
+                        <h3 class="name">Macamuus</h3>
+                        <p class="price">$199</p>
+                    </div>
+                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/shoe.png" class="image-product" alt="">
+                </div>
+                <div class="content">
+                    <div class="flex">
+                        <h3 class="name">Model suit piece</h3>
                         <p class="price">$180</p>
                     </div>
                     <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -210,12 +267,12 @@
             </div>
             <div class="card">
                 <div class="img">
-                    <img src="./img/shirt1.jpg" alt="">
+                    <img src="./img/shirt3.jpg" class="image-product" alt="">
                 </div>
                 <div class="content">
                     <div class="flex">
-                        <h3 class="name">Three suit piece</h3>
-                        <p class="price">$180</p>
+                        <h3 class="name">Mode</h3>
+                        <p class="price">$150</p>
                     </div>
                     <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
@@ -223,12 +280,12 @@
             </div>
             <div class="card">
                 <div class="img">
-                    <img src="./img/shirt2.jpg" alt="">
+                    <img src="./img/shirt2.jpg" class="image-product" alt="">
                 </div>
                 <div class="content">
                     <div class="flex">
-                        <h3 class="name">Three suit piece</h3>
-                        <p class="price">$180</p>
+                        <h3 class="name">trouser</h3>
+                        <p class="price">$380</p>
                     </div>
                     <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
@@ -236,12 +293,12 @@
             </div>
             <div class="card">
                 <div class="img">
-                    <img src="./img/shirt3.jpg" alt="">
+                    <img src="./img/shirt1.jpg" class="image-product" alt="">
                 </div>
                 <div class="content">
                     <div class="flex">
-                        <h3 class="name">Three suit piece</h3>
-                        <p class="price">$180</p>
+                        <h3 class="name">Mod iece</h3>
+                        <p class="price">$170</p>
                     </div>
                     <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
@@ -249,25 +306,12 @@
             </div>
             <div class="card">
                 <div class="img">
-                    <img src="./img/shirt2.jpg" alt="">
+                    <img src="./img/shirt.jpg" class="image-product" alt="">
                 </div>
                 <div class="content">
                     <div class="flex">
-                        <h3 class="name">Three suit piece</h3>
-                        <p class="price">$180</p>
-                    </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img">
-                    <img src="./img/shirt1.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="flex">
-                        <h3 class="name">Three suit piece</h3>
-                        <p class="price">$180</p>
+                        <h3 class="name">v- shirt</h3>
+                        <p class="price">$100</p>
                     </div>
                     <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>

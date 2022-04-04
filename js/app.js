@@ -45,10 +45,21 @@ let containerDimension = containerScroll.getBoundingClientRect();
         nexBtn.style.display = none
     }
 
+// header makin fixed
+window.addEventListener('scroll',function(){
+    let header = document.getElementsByClassName('header')[0];
+    let headerHeight = header.getBoundingClientRect().height;
+    let scrollHight = window.pageYOffset;
 
+    if(scrollHight > headerHeight){
+        header.classList.add('fixed-header')
+    }else{
+        header.classList.remove('fixed-header')
+    }
+})
 
     // fixed nav
-let settings = document.querySelector('.fixed-seting');
+let settings = document.querySelector('.social');
 let sideBar = document.querySelector('.sideBar');
 let closeBtn = document.getElementById('close')
 settings.addEventListener('click',function(){
@@ -84,6 +95,11 @@ function ready(){
         let addToCartBtn = addToCart[i]
         addToCartBtn.addEventListener('click',addingToCart)
     }
+
+    // buy button
+    let buyBtn = document.getElementsByClassName('clear-rows')[0];
+    buyBtn.addEventListener('click',buyNow)
+
 }
 
 
@@ -108,23 +124,54 @@ function addingToCart(e){
     let button = e.target;
     let btnParent = e.target.parentElement.parentElement
     let productCard = btnParent.parentElement;
-    let nameItem = productCard.getElementsByClassName('name')[0].innerText; 
-    let priceItem = productCard.getElementsByClassName('price')[0].innerText; 
-    let imgItem = productCard.querySelectorAll('.img img')[0].src; 
+    let nameItem = btnParent.getElementsByClassName('name')[0].innerText; 
+    let priceItem = btnParent.getElementsByClassName('price')[0].innerText; 
+    let imgItem = btnParent.getElementsByClassName('image-product')[0].src; 
+    // let nameItem = productCard.getElementsByClassName('name')[0].innerText; 
+    // let priceItem = productCard.getElementsByClassName('price')[0].innerText; 
+    // let imgItem = productCard.getElementsByClassName('image-product')[0].src; 
     let price = parseFloat(priceItem.replace('$',""))
 
-
-    pushToCart(nameItem,price,imgItem)
+    let imagePosition = imgItem.indexOf('img');
+    let imgSrc = imgItem.slice(imagePosition)
+    console.log(imgSrc)
+    pushToCart(nameItem,price,imgSrc)
     updateTotal()
 }
-function pushToCart(nameItem,price,imgItem){
+function pushToCart(nameItem,price,imgSrc){
+    // content
+    let content = document.querySelector('.content');
+    // tottal 
+    let sidebarsTotal = document.getElementById("total");
+    // create div and add the class of your name
     let cartShopBox = document.createElement('div');
     cartShopBox.classList.add('row');
+    
+    let innettext = `  <div class="img">
+    <img src="${imgSrc}" alt="">
+    </div>
+    <div class="detail">
+    <div class="flex">
+    <p class="name">${nameItem}</p>
+    <p class="price">$${price}</p>
+    </div>
+        <input type="number" class="input" value="1">
+        </div>
+        <button class="removeBtn">
+        <i class="fa fa-trash "></i>
+        </button>`
+        
+        cartShopBox.innerHTML = innettext
+        let myLeftSideBar = document.getElementsByClassName('sideBar')[0];
+    let leftSidebar = document.getElementsByClassName('sideBar')[0];
+    leftSidebar.appendChild(cartShopBox);
 
-    let mySideBars = document.getElementsByClassName('sideBar')[0];
-    let cardItemsName = mySideBars.getElementsByClassName('name')[0]
+    cartShopBox.getElementsByClassName('removeBtn')[0].addEventListener('click',removingCarRow)
+    cartShopBox.getElementsByClassName('input')[0].addEventListener('click',inputChanged)
+    console.log(content)
+    content.appendChild(cartShopBox)
+    updateTotal()
 }
-
 // updateTotal
 function updateTotal(){
     let mySideBar = document.getElementsByClassName('sideBar')[0];
@@ -140,14 +187,15 @@ function updateTotal(){
 
         total = total + (price * quantityValue)
     }
-    total = Math.round(total * 100) / 100
-    document.getElementsByClassName('total-no')[0].innerText = '$'+total
+    total = Math.round(total * 100) / 100;
+    document.getElementsByClassName('total-no')[0].innerText = '$'+total;
 }
 
-
-
-
-
-
-
-
+function buyNow(){
+    alert('your order is plaaced')    
+    let content = document.querySelectorAll('.content')[0];
+    while(content.hasChildNodes()){
+        content.removeChild(content.firstChild)
+    }
+    updateTotal()
+}
