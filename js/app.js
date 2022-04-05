@@ -24,26 +24,22 @@ sizes.forEach((size,i)=>{
 
 
 //  sliders
-let nexBtn = document.querySelector('.next')
-let prevBn = document.querySelector('.prev')
-let containerScroll = document.querySelector('.product-containers') 
 
-// let containerDimension = item.getBoundingClientRect();
-// let containerWidth = containerDimension.width;
+let nexBtn = document.querySelectorAll('.next')
+let prevBn = document.querySelectorAll('.prev')
+let productContainer = document.querySelectorAll('.product-containers') 
 
-let containerDimension = containerScroll.getBoundingClientRect();
+productContainer.forEach((item,i)=>{
+    let containerDimension = item.getBoundingClientRect();
     let containerWidth = containerDimension.width;
 
-
-    nexBtn.addEventListener('click',function(){
-    containerScroll.scrollLeft +=  containerWidth
+    nexBtn[i].addEventListener('click',()=>{
+        item.scrollLeft +=  containerWidth
     })
-    prevBn.addEventListener('click',function(){
-    containerScroll.scrollLeft -=  containerWidth
+    prevBn[i].addEventListener('click',()=>{
+        item.scrollLeft -=  containerWidth
     })
-    if(containerDimension === containerWidth){
-        nexBtn.style.display = none
-    }
+})
 
 // header makin fixed
 window.addEventListener('scroll',function(){
@@ -139,6 +135,7 @@ function addingToCart(e){
     updateTotal()
 }
 function pushToCart(nameItem,price,imgSrc){
+    alert(` item is added to cart`)
     // content
     let content = document.querySelector('.content');
     // tottal 
@@ -199,3 +196,13 @@ function buyNow(){
     }
     updateTotal()
 }
+
+
+// closeBtn
+let linksaheader = document.querySelector('.links');
+
+let menuBars = document.querySelector('.menu-bar');
+menuBars.addEventListener('click',()=>{
+linksaheader.classList.toggle('show')
+
+});
