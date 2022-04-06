@@ -546,7 +546,7 @@ p{
 
 
 .shopping{
-    background: rgba(0,0,0,.1);
+    background: rgba(0,0,0,.0);
     padding: 40px 0 60px;
 }
 .shopping .container .products{
@@ -625,7 +625,7 @@ p{
 .footer .container .grid{
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }
 .footer .container .grid .card .head{
     text-transform: capitalize;
@@ -660,4 +660,20 @@ p{
     color: white;
     text-transform: capitalize;
     cursor: pointer;
+}
+.footer .div{
+    height: 1px;
+    width: 100%;
+    background: rgba(230, 230, 230,.06);
+    margin-bottom: 8px;
+}
+.footer .container .copy{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    font-family: serif;
+}
+.footer .container .copy .date{
+    color: rgb(230, 230, 230);
+    font-family: satisfy;
 }

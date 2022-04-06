@@ -130,7 +130,6 @@ function addingToCart(e){
 
     let imagePosition = imgItem.indexOf('img');
     let imgSrc = imgItem.slice(imagePosition)
-    console.log(imgSrc)
     pushToCart(nameItem,price,imgSrc)
     updateTotal()
 }
@@ -165,7 +164,6 @@ function pushToCart(nameItem,price,imgSrc){
 
     cartShopBox.getElementsByClassName('removeBtn')[0].addEventListener('click',removingCarRow)
     cartShopBox.getElementsByClassName('input')[0].addEventListener('click',inputChanged)
-    console.log(content)
     content.appendChild(cartShopBox)
     updateTotal()
 }
@@ -206,3 +204,12 @@ menuBars.addEventListener('click',()=>{
 linksaheader.classList.toggle('show')
 
 });
+
+
+
+
+
+
+let nowDate = new Date().getFullYear();
+let copyRightDate = document.querySelector('.date');
+copyRightDate.innerText = nowDate;
