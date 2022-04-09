@@ -125,12 +125,18 @@ p{
         margin-top: 50px;
         width: 100%;
     }
+    .header .row2 .links ul li:hover{
+        background: rgba(255, 255, 255, 0.492);
+    }
     .header .row2 .links ul li{
         margin-bottom: 5px;
         padding: 5px;
         border-bottom: 1px solid rgba(230, 230, 230,.2);
     }
     .header .row2 .links ul li a{
+        color: white;
+    }
+    .header .row2 .links ul li a:hover{
         color: white;
     }
 }
