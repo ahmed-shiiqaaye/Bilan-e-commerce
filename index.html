@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Charm&family=Great+Vibes&family=Josefin+Sans&family=League+Gothic&family=Lobster&family=Nunito&family=Permanent+Marker&family=Poppins:wght@400;500&family=Roboto&family=Satisfy&display=swap" rel="stylesheet">
+     <!-- animate on scroll  -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <title>Bilan e-commerce</title>
 </head>
@@ -40,12 +42,12 @@
   <!-- showcase -->
   <main class="main" id="main">
     <div class="container">
-        <div class="text">
-            <h1>Bilan e-Commerce store and supper market</h1>
+        <div class="text" data-aos="fade-up" >
+            <h1 >Bilan e-Commerce store and supper market</h1>
             <p>This is an online website and e-commerce where you can order all the products you need by just shopping in the shopping. Free delivey on order higher than 100$ feel free to contact us.</p>
             <a href="#" class="btn">buy now</a>
         </div>
-        <img src="./img/shoe.png" alt="">
+        <img src="./img/shoe.png" alt="" data-aos="fade-down" >
     </div>
 </main>
 <!-- about -->
@@ -55,8 +57,8 @@
             <h1>about us</h1>
         </div>
         <div class="flex">
-            <img src="./img/Bilan-removebg-preview.png" alt="">
-            <div class="text">
+            <img src="./img/Bilan-removebg-preview.png" alt="" data-aos="fade-up" >
+            <div class="text" data-aos="fade-up" >
                 <h1>Bilan e-Commerce</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing. Cupiditate, similique sed. Omnis, aperiam repellat! Deleniti sapiente atque vel.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe architecto vel aut, fugiat ipsam illo!</p>
@@ -68,11 +70,11 @@
 <!-- grid  -->
 <div class="divide">
     <div class="left">
-        <img src="./img/d5-min.jpg" alt="">
+        <img src="./img/d5-min.jpg" alt="" data-aos="zoom-in" >
         <p>womens fashion</p>
     </div>
     <div class="right">
-        <img src="./img/shirt3.jpg" alt="">
+        <img src="./img/shirt3.jpg" alt="" data-aos="zoom-in" >
         <p>mens clothes</p>
     </div>
 </div>
@@ -83,7 +85,7 @@
             <h1>new model shirts</h1>
         </div>
         <div class="product-container">
-            <div class="img-side">
+            <div class="img-side" data-aos="fade-up" >
                 <div class="img-container">
                     <img src="./img/shirt.jpg" class="active" alt="">
                     <img src="./img/shirt1.jpg" alt="">
@@ -91,7 +93,7 @@
                     <img src="./img/shirt3.jpg" alt="">
                 </div>
             </div>
-            <div class="text-side">
+            <div class="text-side" data-aos="fade-up">
                 <h2>model shirts</h2>
                 <p>These shirts are from different countries with different sizes and different made ups you can get our store by ordering in the section below Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti architecto, fugiat ea eum incidunt numquam quo est. Accusantium pariatur nihil iure, harum ab eum. Natus, dignissimos quis porro voluptate quaerat nam veniam enim neque molestiae illum, nesciunt, sequi molestias accusantium!</p>
                 <div class="sizes">
@@ -104,7 +106,7 @@
                     <div class="size">xxl</div>
                   </div>
                 </div>
-                <div class="btn">purchase</div>
+                <div class="btn">for more inf subcribe</div>
             </div>
         </div>
     </div>
@@ -333,9 +335,12 @@
                 <div class="content">
                     <div class="flex">
                         <h3 class="name">home t-shirts</h3>
-                        <p class="price">$18.90</p>
+                        <p class="price">$19.90</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$38.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -348,7 +353,10 @@
                         <h3 class="name">short sleeves</h3>
                         <p class="price">$20.00</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$58.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -361,7 +369,10 @@
                         <h3 class="name">cloured shirts</h3>
                         <p class="price">$13.60</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$30.70</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -374,7 +385,10 @@
                         <h3 class="name">men shirts</h3>
                         <p class="price">$19.99</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">adults</p>
+                        <span class="past">$89.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -387,7 +401,10 @@
                         <h3 class="name">printed t-shirts</h3>
                         <p class="price">$10.00</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$80.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -400,7 +417,10 @@
                         <h3 class="name">Model trouser</h3>
                         <p class="price">$150</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$280.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -413,7 +433,10 @@
                         <h3 class="name">full style set</h3>
                         <p class="price">$383.90</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$650.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -426,7 +449,10 @@
                         <h3 class="name">amazing design</h3>
                         <p class="price">$299.90</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$449.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -439,7 +465,10 @@
                         <h3 class="name">women jeans</h3>
                         <p class="price">$99.99</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$200.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -452,7 +481,10 @@
                         <h3 class="name">women fashion t-</h3>
                         <p class="price">$99.99</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">199.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -465,7 +497,10 @@
                         <h3 class="name">jeans fashion</h3>
                         <p class="price">$399.49</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$499.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -478,7 +513,10 @@
                         <h3 class="name">women full design</h3>
                         <p class="price">$249.99</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$600.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -491,7 +529,10 @@
                         <h3 class="name">princess hat</h3>
                         <p class="price">$199.99</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$300.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -504,7 +545,10 @@
                         <h3 class="name">women fashion</h3>
                         <p class="price">$49.99</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$99.90</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -517,7 +561,10 @@
                         <h3 class="name">sports jersey</h3>
                         <p class="price">$149.99</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$299.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -530,12 +577,31 @@
                         <h3 class="name">men sports</h3>
                         <p class="price">$149.99</p>
                     </div>
-                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="info">
+                        <p class="now">kids|adults</p>
+                        <span class="past">$375.00</span>
+                    </div>
                     <button class="addToCart">add to cart <i class="fa fa-shopping-cart"></i></button>
                 </div>
         </div>
     </div>
 </div>
+</div>
+
+<div class="contact">
+    <div class="container">
+        <div class="title"><h1>contact us</h1></div>
+            <form class="form">
+                <input type="text" class="input"placeholder="First name">
+                <input type="text" class="input" placeholder="Last name">
+                <input type="number" class="input" placeholder="Phone number">
+                <input type="email" class="input" placeholder="Email*">
+                <input type="password" class="input" placeholder="Password*">
+                <textarea class="input" rows="10" placeholder="Message"></textarea>
+                <button class="btn">send</button>
+            </form>
+        </div>
+    </div>
 </div>
 
 
@@ -600,5 +666,16 @@
 
   <script src="https://kit.fontawesome.com/405f30ee9a.js"></script>
   <script src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!-- animate on scroll link to script tag -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- ------------------------------------ -->
+      <script>
+
+          AOS.init(
+            //   duration='900',
+          );
+      </script>
+      
 </body>
 </html>

@@ -32,7 +32,7 @@ p{
 .container{
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 0px;
+    padding: 0 20px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .header .container .logo img{
@@ -146,7 +146,7 @@ p{
 .main{
     height: 80vh;
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8))
+    background: linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58))
     ,url(/img/home.jpg) center center/cover;
 }
 .main .container{
@@ -586,9 +586,26 @@ p{
     font-weight: bold;
 }
 .shopping .container .products .card .content .info{
-    line-height: 1.3;
-    margin-bottom: 14px;
-    opacity: .7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    margin: 4px 0;
+}
+.shopping .container .products .card .content .info .now{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: .7px;
+    font-family: poppins;
+}
+.shopping .container .products .card .content .info .past{
+margin-left: 10px;
+text-decoration: line-through;
+opacity: .5;
+font-weight: normal;
+/* border-left: 1px solid rgba(2, 2, 2, 0.473); */
+padding-left: 8px;
 }
 .shopping .container .products .card .content .addToCart{
     width: 100%;
@@ -683,3 +700,30 @@ p{
     color: rgb(230, 230, 230);
     font-family: satisfy;
 }
+
+.contact{
+    /* background: rgba(0,0,0,.1); */
+    padding: 40px 0;
+}
+.contact .form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin:  0 auto; 
+    flex: 1 1 20rem;
+}
+.contact .form div{
+   flex: 1 1 20rem;
+}
+.contact .form .input{
+    padding: 12px 10px;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.6);
+    outline: none;
+    background: rgba(250, 250, 250,.7);
+}
+.contact .form textarea{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+} 
+
