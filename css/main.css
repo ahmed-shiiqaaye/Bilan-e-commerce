@@ -146,7 +146,7 @@ p{
 .main{
     height: 80vh;
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58))
+    background: linear-gradient(rgba(0,0,0,.87),rgba(0,0,0,.7))
     ,url(/img/home.jpg) center center/cover;
 }
 .main .container{
@@ -163,7 +163,8 @@ p{
     color: white;
 }
 .main .container p{
-    color:#de5f3e;
+    color:white;
+    opacity: .7;
     margin-bottom: 30px;
     line-height: 1.6;
 }
